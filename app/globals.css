@@ -12,7 +12,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+html { scroll-behavior: smooth; scroll-padding-top: 50px; }
 body {
   margin: 0;
   color: var(--ink);
@@ -45,9 +45,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--coral); outline
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: 62px;
+  min-height: 33px;
   padding: 0 max(28px, calc((100% - 1320px) / 2));
-  background: transparent;
+  border-bottom: 1px solid rgba(22, 122, 126, .42);
+  background: rgba(237, 246, 245, .5);
+  box-shadow: 0 4px 14px rgba(18, 55, 73, .07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .wordmark {
   display: inline-flex;
@@ -59,19 +63,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--coral); outline
   text-decoration: none;
   white-space: nowrap;
 }
-.wordmark-mark {
-  display: grid;
-  width: 31px;
-  height: 31px;
-  place-items: center;
-  border-radius: 50%;
-  color: white;
-  background: var(--ink);
-  font: 500 .67rem var(--mono), monospace;
-  letter-spacing: -.08em;
-}
 .wordmark-dot, .footer-mark span { color: var(--coral); }
-.topbar nav { display: flex; gap: clamp(12px, 2vw, 29px); align-items: center; }
+.topbar nav { display: flex; gap: clamp(12px, 2vw, 29px); align-items: center; line-height: 1.15; }
 .topbar nav a, .topbar-contact {
   font-size: .77rem;
   font-weight: 500;
@@ -81,7 +74,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--coral); outline
 .topbar nav a { display: inline-flex; gap: 5px; align-items: baseline; }
 .topbar nav a:hover, .topbar-contact:hover { color: var(--teal); }
 .nav-index { color: var(--teal); font: .56rem var(--mono), monospace; }
-.topbar-contact { padding: 8px 11px; border-bottom: 1px solid var(--ink); white-space: nowrap; }
+.topbar-contact { padding: 3px 8px; border-bottom: 1px solid var(--ink); white-space: nowrap; line-height: 1.15; }
 .topbar-contact span { margin-left: 5px; }
 main { width: min(1190px, calc(100% - 88px)); margin: 0 auto; }
 .hero {
@@ -313,13 +306,12 @@ main { width: min(1190px, calc(100% - 88px)); margin: 0 auto; }
   .project-copy h3 { font-size: 1.8rem; }
 }
 @media (max-width: 680px) {
-  html { scroll-padding-top: 88px; }
-  .topbar { min-height: 72px; flex-wrap: wrap; gap: 0 10px; padding: 4px 12px 5px; }
-  .wordmark { font-size: .82rem; }
-  .wordmark-mark { width: 27px; height: 27px; }
-  .topbar-contact { padding: 5px; font-size: .69rem; }
-  .topbar nav { order: 2; width: 100%; justify-content: space-between; gap: 6px; }
-  .topbar nav a { font-size: .66rem; }
+  html { scroll-padding-top: 52px; }
+  .topbar { min-height: 40px; flex-wrap: wrap; gap: 0 8px; padding: 1px 12px 2px; }
+  .wordmark { font-size: .7rem; line-height: 1.15; }
+  .topbar-contact { padding: 2px 5px; font-size: .6rem; line-height: 1.15; }
+  .topbar nav { order: 2; width: 100%; justify-content: space-between; gap: 5px; line-height: 1.15; }
+  .topbar nav a { font-size: .59rem; }
   main { width: calc(100% - 38px); }
   .hero { display: flex; min-height: 850px; min-height: max(790px, 100svh); flex-direction: column; align-items: stretch; justify-content: center; padding: 137px 0 81px; }
   .hero-copy { padding: 3px 1% 0; }
@@ -368,8 +360,8 @@ main { width: min(1190px, calc(100% - 88px)); margin: 0 auto; }
   .snd { right: 10px; bottom: 10px; padding: 9px 10px; font-size: .53rem; }
 }
 @media (max-width: 380px) {
-  .topbar nav { gap: 4px; }
-  .topbar nav a { font-size: .59rem; }
+  .topbar nav { gap: 3px; }
+  .topbar nav a { font-size: .56rem; }
   .hero h1 { font-size: 4.7rem; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .toolkit-group, .toolkit-group:nth-child(4), .toolkit-group:nth-child(5) { padding: 13px 8px; }

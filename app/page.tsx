@@ -18,7 +18,6 @@ export default function Page() {
       <div className="site-shell">
         <header className="topbar">
           <a className="wordmark" href="#top" aria-label="Tushar Singh, back to top">
-            <span className="wordmark-mark">TS</span>
             <span>Tushar Singh<span className="wordmark-dot">.</span></span>
           </a>
           <nav aria-label="Main navigation">
