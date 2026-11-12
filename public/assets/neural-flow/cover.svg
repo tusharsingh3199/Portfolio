@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="84" y1="43" x2="806" y2="695" gradientUnits="userSpaceOnUse"><stop stop-color="#D6EDEA"/><stop offset="1" stop-color="#83B8BD"/></linearGradient>
+    <linearGradient id="sea" x1="447" y1="233" x2="447" y2="604" gradientUnits="userSpaceOnUse"><stop stop-color="#B0D5CC"/><stop offset="1" stop-color="#4F9297"/></linearGradient>
+    <linearGradient id="route" x1="302" y1="302" x2="660" y2="454" gradientUnits="userSpaceOnUse"><stop stop-color="#E9A274"/><stop offset=".48" stop-color="#F0DBA8"/><stop offset="1" stop-color="#F8F3DE"/></linearGradient>
+    <filter id="shadow" x="115" y="52" width="692" height="601" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="17"/></filter>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h900v700H0z"/>
+  <circle cx="174" cy="142" r="95" fill="#FFF2D6" fill-opacity=".72"/>
+  <path d="M0 361c112-55 204-16 314-71 128-64 221 1 314-48 103-55 177-40 272-6v464H0V361Z" fill="#F4F7E8" fill-opacity=".48"/>
+  <path d="M0 429c124-47 222-39 322-91 109-57 167-8 255-44 133-55 201-63 323-13v419H0V429Z" fill="url(#sea)" fill-opacity=".78"/>
+  <path d="M0 547c122-35 235-67 359-59 142 10 260-65 541-63" stroke="#E9F5E9" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M0 589c136-63 267-35 390-57 143-25 279-97 510-78M0 485c135-23 204-92 348-81 144 11 235-78 552-74" stroke="#E9F5E9" stroke-opacity=".32" stroke-width="2"/>
+  <path d="M-25 651c134-61 258-30 389-58 154-33 297-105 568-89" stroke="#E9F5E9" stroke-opacity=".27" stroke-width="2"/>
+  <rect x="136" y="83" width="637" height="473" rx="13" fill="#173D50" fill-opacity=".15" filter="url(#shadow)"/>
+  <rect x="122" y="69" width="637" height="473" rx="13" fill="#F6FAF2" fill-opacity=".88" stroke="#fff" stroke-opacity=".9"/>
+  <path d="M122 101a32 32 0 0 1 32-32h573a32 32 0 0 1 32 32v40H122v-40Z" fill="#EBF3EA"/>
+  <circle cx="149" cy="104" r="5" fill="#E5A379"/><circle cx="167" cy="104" r="5" fill="#90BEB5"/><circle cx="185" cy="104" r="5" fill="#D9D3A5"/>
+  <text x="217" y="109" fill="#315C67" font-family="monospace" font-size="12" letter-spacing="2">NEURAL FLOW / REGIONAL MODEL</text>
+  <rect x="152" y="161" width="399" height="306" rx="6" fill="#A9CFCA"/>
+  <path d="M152 358c90-74 152-29 226-112 65-73 107 7 173-49v270H152V358Z" fill="#7DAFA9" fill-opacity=".51"/>
+  <path d="M152 371c80-62 150-47 225-118 67-64 104-3 174-47m-399 203c87-51 136-46 215-103 62-45 117-6 184-48m-399 184c82-43 150-29 220-75 61-40 102-17 179-53" stroke="#EAF4E5" stroke-opacity=".71" stroke-width="2"/>
+  <path d="M176 214c57 21 93 9 142-12 68-30 100-23 139 10 40 33 51 24 83-6m-336 71c41 18 86 13 142-14 66-31 100-17 136 11 32 25 52 21 84-5" stroke="#D3EAE2" stroke-width="2"/>
+  <path d="M180 420c37-49 61-69 99-81 43-14 61 11 93 2 44-12 44-69 86-73 37-3 49 24 71 8" stroke="url(#route)" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 0"/>
+  <circle cx="180" cy="420" r="6" fill="#F1AA7C" stroke="#fff" stroke-width="2"/><circle cx="458" cy="268" r="6" fill="#EDE5C8" stroke="#fff" stroke-width="2"/>
+  <circle cx="274" cy="339" r="4" fill="#fff"/><circle cx="372" cy="341" r="4" fill="#fff"/><circle cx="470" cy="267" r="4" fill="#fff"/>
+  <rect x="568" y="161" width="163" height="306" rx="6" fill="#EAF2E9"/>
+  <text x="587" y="194" fill="#58818A" font-family="monospace" font-size="9" letter-spacing="1.5">PIPELINE STATUS</text>
+  <path d="M596 224v170" stroke="#A8C7BC" stroke-width="2"/>
+  <circle cx="596" cy="232" r="6" fill="#318B83"/><circle cx="596" cy="273" r="6" fill="#318B83"/><circle cx="596" cy="314" r="6" fill="#318B83"/><circle cx="596" cy="355" r="6" fill="#EBA36F"/><circle cx="596" cy="396" r="6" fill="#C5D8CC"/>
+  <text x="612" y="236" fill="#315C67" font-family="monospace" font-size="10">ACQUIRE</text><text x="612" y="277" fill="#315C67" font-family="monospace" font-size="10">VALIDATE</text><text x="612" y="318" fill="#315C67" font-family="monospace" font-size="10">FORECAST</text><text x="612" y="359" fill="#315C67" font-family="monospace" font-size="10">DECISION</text><text x="612" y="400" fill="#75918F" font-family="monospace" font-size="10">APPROVE</text>
+  <path d="M587 425h124" stroke="#C1D5CB"/>
+  <text x="587" y="447" fill="#6B8C8E" font-family="monospace" font-size="9">ERA5 · NOAA GFS</text>
+  <rect x="152" y="480" width="155" height="36" rx="18" fill="#D7EAE1"/>
+  <circle cx="172" cy="498" r="4" fill="#318B83"/><text x="184" y="502" fill="#347477" font-family="monospace" font-size="9" letter-spacing=".6">PROVENANCE TRACKED</text>
+  <text x="124" y="611" fill="#275C68" font-family="monospace" font-size="11" letter-spacing="2">WEATHER / DATA PROVENANCE / DECISION SUPPORT</text>
+</svg>

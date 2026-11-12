@@ -6,8 +6,8 @@ const head = Chakra_Petch({ subsets: ["latin"], weight: ["400", "600"], variable
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--mono" });
 
 export const metadata: Metadata = {
-  title: "Tushar Singh | Every build is a small eureka.",
-  description: "Tushar Singh, AI/ML engineer and web and DevOps engineer. Projects in medical imaging, weather forecasting and LLM agents.",
+  title: "Tushar Singh | AI/ML, web & systems",
+  description: "Tushar Singh builds AI/ML systems, web products, and the infrastructure around them. Explore projects in medical imaging, weather research, and agentic game AI.",
   metadataBase: new URL("https://eureka7.xyz"),
 };
 
