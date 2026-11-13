@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-export default function Reveal({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+export default function Reveal({ children }: { children: React.ReactNode }) {
   const r = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const e = r.current!;
@@ -9,5 +9,5 @@ export default function Reveal({ children, className = "" }: { children: React.R
     o.observe(e);
     return () => o.disconnect();
   }, []);
-  return <div ref={r} className={`rv ${className}`}>{children}</div>;
+  return <div ref={r} className="rv">{children}</div>;
 }

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { Chakra_Petch, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -12,5 +13,14 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en" className={`${head.variable} ${mono.variable}`}><body>{children}</body></html>;
+  return (
+    <html lang="en" className={`${head.variable} ${mono.variable}`}>
+      <body>
+        <div className="site-background" aria-hidden="true">
+          <Image src="/assets/eureka7.png" alt="" fill priority sizes="100vw" />
+        </div>
+        {children}
+      </body>
+    </html>
+  );
 }

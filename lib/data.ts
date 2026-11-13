@@ -1,18 +1,75 @@
 export const links = [
-  ["GitHub", "https://github.com/tusharsingh3199"],
-  ["LinkedIn", "https://www.linkedin.com/in/tushar-singh-97526a379/"],
-  ["LeetCode", "https://leetcode.com/tusharsingh3199"],
-  ["Kaggle", "https://www.kaggle.com/tusharsingh3199"],
-  ["YouTube", "https://youtube.com/@tusharsingh3282"],
+  ["GitHub", "https://github.com/tusharsingh3199", "https://cdn.simpleicons.org/github/FFFFFF"],
+  ["LinkedIn", "https://www.linkedin.com/in/tushar-singh-97526a379/", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"],
+  ["LeetCode", "https://leetcode.com/tusharsingh3199", "https://cdn.simpleicons.org/leetcode/FFFFFF"],
+  ["Kaggle", "https://www.kaggle.com/tusharsingh3199", "https://cdn.simpleicons.org/kaggle/FFFFFF"],
+  ["YouTube", "https://youtube.com/@tusharsingh3282", "https://cdn.simpleicons.org/youtube/FFFFFF"],
 ];
 export const email = "tusharsingh1346@gmail.com";
 
-export const stack: [string, string][] = [
-  ["Languages", "Python, C, C++, Java, Bash, HTML, CSS, JavaScript, TypeScript"],
-  ["ML and AI", "Deep learning, computer vision, RAG, agentic AI, LangChain, LangGraph"],
-  ["ML libraries", "PyTorch, TensorFlow, Scikit-learn, OpenCV, MediaPipe, NumPy, Pandas, Matplotlib"],
-  ["Web and data", "FastAPI, React, Node.js, Express.js, REST APIs, PostgreSQL, MySQL, MongoDB"],
-  ["Cloud and DevOps", "Git, GitHub Actions, Linux, AWS, Docker, Kubernetes"],
+export const stack = [
+  {
+    category: "Languages",
+    items: [
+      { name: "Python", icon: "python", mark: "Py" },
+      { name: "C", icon: "c", mark: "C" },
+      { name: "C++", icon: "cplusplus", mark: "C++" },
+      { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", mark: "J" },
+      { name: "Bash", icon: "gnubash", mark: "$" },
+      { name: "HTML", icon: "html5", mark: "5" },
+      { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", mark: "3" },
+      { name: "JavaScript", icon: "javascript", mark: "JS" },
+      { name: "TypeScript", icon: "typescript", mark: "TS" },
+    ],
+  },
+  {
+    category: "ML and AI",
+    items: [
+      { name: "Deep learning", mark: "DL" },
+      { name: "Computer vision", mark: "CV" },
+      { name: "RAG", mark: "RAG" },
+      { name: "Agentic AI", mark: "AI" },
+      { name: "LangChain", icon: "langchain", mark: "LC" },
+      { name: "LangGraph", mark: "LG" },
+    ],
+  },
+  {
+    category: "ML libraries",
+    items: [
+      { name: "PyTorch", icon: "pytorch", mark: "PT" },
+      { name: "TensorFlow", icon: "tensorflow", mark: "TF" },
+      { name: "Scikit-learn", icon: "scikitlearn", mark: "SK" },
+      { name: "OpenCV", icon: "opencv", mark: "CV" },
+      { name: "MediaPipe", icon: "mediapipe", mark: "MP" },
+      { name: "NumPy", icon: "numpy", mark: "NP" },
+      { name: "Pandas", icon: "pandas", mark: "PD" },
+      { name: "Matplotlib", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg", mark: "M" },
+    ],
+  },
+  {
+    category: "Web and data",
+    items: [
+      { name: "FastAPI", icon: "fastapi", mark: "FA" },
+      { name: "React", icon: "react", mark: "R" },
+      { name: "Node.js", icon: "nodedotjs", mark: "N" },
+      { name: "Express.js", icon: "express", mark: "EX" },
+      { name: "REST APIs", mark: "API" },
+      { name: "PostgreSQL", icon: "postgresql", mark: "PG" },
+      { name: "MySQL", icon: "mysql", mark: "SQL" },
+      { name: "MongoDB", icon: "mongodb", mark: "M" },
+    ],
+  },
+  {
+    category: "Cloud and DevOps",
+    items: [
+      { name: "Git", icon: "git", mark: "G" },
+      { name: "GitHub Actions", icon: "githubactions", mark: "GH" },
+      { name: "Linux", icon: "linux", mark: "L" },
+      { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg", mark: "AWS" },
+      { name: "Docker", icon: "docker", mark: "D" },
+      { name: "Kubernetes", icon: "kubernetes", mark: "K8s" },
+    ],
+  },
 ];
 
 export const projects = [

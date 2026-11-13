@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import TechBadge from "@/components/TechBadge";
 import { links, email, stack, projects, jobs, wins, skills } from "@/lib/data";
 
 const nav = [
@@ -48,37 +49,6 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="hero-art" aria-label="An original illustration of a rider tracing a bright line across the sky" role="img">
-              <div className="art-sun" />
-              <svg className="hero-landscape" viewBox="0 0 760 660" fill="none" aria-hidden="true">
-                <defs>
-                  <linearGradient id="wave" x1="120" y1="520" x2="670" y2="170" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#31B9C1" /><stop offset=".52" stopColor="#55D8CE" /><stop offset="1" stopColor="#F4B37B" />
-                  </linearGradient>
-                  <linearGradient id="board" x1="280" y1="505" x2="545" y2="417" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#123F5A" /><stop offset="1" stopColor="#176F7D" />
-                  </linearGradient>
-                  <filter id="glow" x="30" y="40" width="700" height="580" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse">
-                    <feGaussianBlur stdDeviation="9" />
-                  </filter>
-                </defs>
-                <path d="M75 434C176 343 195 480 307 389c91-74 104-203 227-188 64 8 66 66 135 26" stroke="url(#wave)" strokeWidth="21" opacity=".34" filter="url(#glow)" />
-                <path className="art-trail art-trail-back" d="M43 447c118-100 144 51 272-59 106-91 124-219 241-192 71 16 72 69 151 23" stroke="url(#wave)" strokeWidth="4" strokeLinecap="round" />
-                <path className="art-trail art-trail-front" d="M95 495c101-56 153 38 257-61 80-77 115-179 204-157" stroke="#fff" strokeWidth="2" strokeLinecap="round" opacity=".8" />
-                <path d="M411 347l24-70 33-46 17 10-20 50 46 39 63 30-10 15-89-24-34-28-15 51-51 49-15-9 37-54-9-24-42 12-29 31-14-12 34-51 47-27z" fill="#133B50" />
-                <path d="M460 217c8-13 25-18 37-10 11 8 13 24 5 35l-7 10-39-22 4-13z" fill="#133B50" />
-                <path d="M332 477c55-3 106-27 148-53 40-24 86-33 132-32-37 23-68 48-110 68-48 23-108 34-170 24z" fill="url(#board)" />
-                <path d="M353 480c78-3 141-30 202-71" stroke="#B5F5E9" strokeWidth="3" strokeLinecap="round" />
-                <path d="M478 301l23-53m-56 30 43 26" stroke="#61D7C8" strokeWidth="4" strokeLinecap="round" />
-                <circle cx="605" cy="158" r="44" fill="#FFF8E8" fillOpacity=".87" />
-                <circle cx="605" cy="158" r="63" stroke="#fff" strokeOpacity=".34" />
-                <path d="M128 226c24-24 63-24 87 0m-58 21c16-15 42-15 58 0" stroke="#fff" strokeWidth="3" strokeLinecap="round" opacity=".72" />
-                <path d="M542 489c35-21 75-17 105-2m-65 25c19-9 39-8 54 0" stroke="#fff" strokeWidth="3" strokeLinecap="round" opacity=".58" />
-                <circle cx="238" cy="170" r="3" fill="#fff" /><circle cx="677" cy="290" r="4" fill="#fff" /><circle cx="157" cy="359" r="2" fill="#fff" />
-              </svg>
-              <div className="art-caption mono"><span>01 / FIND YOUR LINE</span><span>SKY, OPEN</span></div>
-              <div className="art-coordinate mono">35° 41′ 22″ N&nbsp;&nbsp; 139° 41′ 30″ E</div>
-            </div>
             <a className="scroll-cue mono" href="#about"><span className="scroll-cue-line" />SCROLL TO EXPLORE</a>
           </section>
 
@@ -101,11 +71,13 @@ export default function Page() {
               <p>Tools are only as interesting as what you make with them.</p>
             </div>
             <div className="toolkit-grid">
-              {stack.map(([category, items], index) => (
+              {stack.map(({ category, items }, index) => (
                 <article className="toolkit-group" key={category}>
                   <span className="toolkit-index mono">0{index + 1}</span>
                   <h3>{category}</h3>
-                  <p>{items.split(", ").map((item) => <span className="tool-pill" key={item}>{item}</span>)}</p>
+                  <div className="toolkit-badges">
+                    {items.map((item) => <TechBadge key={item.name} {...item} />)}
+                  </div>
                 </article>
               ))}
             </div>
@@ -201,8 +173,11 @@ export default function Page() {
               <h2 id="contact-title">Have a good<br /><em>one in mind?</em></h2>
               <a className="contact-email" href={`mailto:${email}`}>{email}<span aria-hidden="true">↗</span></a>
               <div className="social-links">
-                {links.map(([name, url]) => (
-                  <a key={name} href={url} target="_blank" rel="noreferrer">{name}<span aria-hidden="true">↗</span></a>
+                {links.map(([name, url, icon]) => (
+                  <a key={name} href={url} target="_blank" rel="noreferrer" aria-label={name} title={name}>
+                    <span className="social-icon"><img src={icon} alt="" loading="lazy" decoding="async" /></span>
+                    <span className="social-label">{name}</span>
+                  </a>
                 ))}
               </div>
             </div>

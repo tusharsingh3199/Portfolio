@@ -1,13 +1,16 @@
 # Tushar Singh — Portfolio
 
-A responsive, single-page portfolio for [eureka7.xyz](https://eureka7.xyz). The visual direction pairs a calm pale-sky palette with an original sky-rider illustration, technical typography, and restrained motion.
+A responsive, single-page portfolio for [eureka7.xyz](https://eureka7.xyz). The visual direction pairs a blue glass palette with a full-screen Eureka Seven background, technical typography, and restrained motion.
 
 ## Features
 
 - Fixed, transparent, full-width navigation with links to each page section.
 - One-page vertical layout: hero, about, toolkit, projects, experience, milestones, skills, and contact.
 - Responsive project panels with original SVG cover illustrations and links to source repositories.
+- Full-screen background image with translucent blue panels for readable content.
 - Scroll-triggered section reveals using the browser's `IntersectionObserver`.
+- Glassy, pointer-tilting technology badges.
+- Technology logos loaded from Simple Icons with a text-mark fallback if a logo is unavailable.
 - Reduced-motion support for visitors who prefer less animation.
 - Résumé download and direct email and social links.
 - No UI framework, animation library, analytics, or required environment variables.
@@ -17,6 +20,7 @@ A responsive, single-page portfolio for [eureka7.xyz](https://eureka7.xyz). The 
 - **Next.js 15** with the App Router
 - **React 19** and **TypeScript**
 - Custom CSS and inline SVG illustrations
+- Simple Icons CDN for technology marks
 - Fonts loaded with `next/font/google` (Chakra Petch and JetBrains Mono)
 
 ## Getting started
@@ -62,12 +66,14 @@ app/
   layout.tsx        Root layout, fonts, and site metadata
   page.tsx          Portfolio sections and page composition
 components/
+  TechBadge.tsx     Interactive technology badges and logos
   Reveal.tsx        Scroll-triggered reveal wrapper
 lib/
   data.ts           Portfolio copy, skills, project data, and external links
 public/
   Tushar-Singh-Resume.pdf
   assets/
+    eureka7.png
     brain-tumor/cover.svg
     neural-flow/cover.svg
     agentic-game/cover.svg
